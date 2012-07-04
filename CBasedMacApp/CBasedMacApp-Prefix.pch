@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CBasedMacApp' target in the 'CBasedMacApp' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
