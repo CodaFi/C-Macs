@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8497818D15A361E4002B7B94 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497818C15A361E4002B7B94 /* Cocoa.framework */; };
 		8497819715A361E4002B7B94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8497819515A361E4002B7B94 /* InfoPlist.strings */; };
 		8497819915A361E4002B7B94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497819815A361E4002B7B94 /* main.m */; };
 		8497819D15A361E4002B7B94 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8497819B15A361E4002B7B94 /* Credits.rtf */; };
@@ -17,6 +16,8 @@
 		8497822115A3EF23002B7B94 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497822015A3EF23002B7B94 /* View.m */; };
 		8497822715A3EFEE002B7B94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497822615A3EFEE002B7B94 /* QuartzCore.framework */; };
 		8497822B15A4018C002B7B94 /* Icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8497822A15A4018C002B7B94 /* Icons.icns */; };
+		8497822F15A40669002B7B94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497822E15A40669002B7B94 /* Foundation.framework */; };
+		8497823115A40676002B7B94 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497823015A40676002B7B94 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		8497822015A3EF23002B7B94 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		8497822615A3EFEE002B7B94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
 		8497822A15A4018C002B7B94 /* Icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icons.icns; sourceTree = "<group>"; };
+		8497822C15A4065C002B7B94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
+		8497822E15A40669002B7B94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../System/Library/Frameworks/Foundation.framework; sourceTree = "<group>"; };
+		8497823015A40676002B7B94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +47,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8497823115A40676002B7B94 /* AppKit.framework in Frameworks */,
+				8497822F15A40669002B7B94 /* Foundation.framework in Frameworks */,
 				8497822715A3EFEE002B7B94 /* QuartzCore.framework in Frameworks */,
 				849781E615A38532002B7B94 /* CoreFoundation.framework in Frameworks */,
 				849781AF15A367F8002B7B94 /* ApplicationServices.framework in Frameworks */,
-				8497818D15A361E4002B7B94 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,9 @@
 		8497817D15A361E3002B7B94 = {
 			isa = PBXGroup;
 			children = (
+				8497823015A40676002B7B94 /* AppKit.framework */,
+				8497822E15A40669002B7B94 /* Foundation.framework */,
+				8497822C15A4065C002B7B94 /* Cocoa.framework */,
 				8497822A15A4018C002B7B94 /* Icons.icns */,
 				8497822615A3EFEE002B7B94 /* QuartzCore.framework */,
 				849781E515A38532002B7B94 /* CoreFoundation.framework */,
