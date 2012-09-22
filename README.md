@@ -1,7 +1,7 @@
-## CBasedMacApp
+## C-Macs
 ### A Cocoa Application with no Nibs and no Objective-C Code
 
-CBasedMacApp is a successful attempt to port the ability to [dig a foundation with a spoon](http://stackoverflow.com/questions/10289890/how-to-write-ios-app-purely-in-c#comment13239523_10289913).  The app is written entirely in C, with gratuitous calls to the Objective-C Runtime.  
+C-Macs is a successful attempt to port the ability to [dig a foundation with a spoon](http://stackoverflow.com/questions/10289890/how-to-write-ios-app-purely-in-c#comment13239523_10289913).  The app is written entirely in C, with gratuitous calls to the Objective-C Runtime.  
 
 ## Features
 * Nibless!
