@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CBasedMacApp/AppDelegate.m"
-         timestampString = "363067465.841851"
+         timestampString = "373989480.63742"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "33"
+         endingLineNumber = "33"
          landmarkName = "AppDel_didFinishLaunching()"
          landmarkType = "7">
       </FileBreakpoint>

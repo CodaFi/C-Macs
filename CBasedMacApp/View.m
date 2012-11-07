@@ -16,7 +16,7 @@ Class ViewClass;
 
 
 // This is a simple -drawRect implementation for our class. We could have
-// used a UILabel  or something of that sort instead, but I felt that this
+// used a NSTextField  or something of that sort instead, but I felt that this
 // stuck with the C-based mentality of the application.
 void View_drawRect(id self, SEL _cmd, CGRect rect)
 {

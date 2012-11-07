@@ -36,8 +36,7 @@
 		8497821E15A3EEF0002B7B94 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8497822015A3EF23002B7B94 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		8497822615A3EFEE002B7B94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
-		8497822A15A4018C002B7B94 /* Icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icons.icns; sourceTree = "<group>"; };
-		8497822C15A4065C002B7B94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
+		8497822A15A4018C002B7B94 /* Icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icons.icns; path = ../Icons.icns; sourceTree = "<group>"; };
 		8497822E15A40669002B7B94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../System/Library/Frameworks/Foundation.framework; sourceTree = "<group>"; };
 		8497823015A40676002B7B94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,8 +62,6 @@
 			children = (
 				8497823015A40676002B7B94 /* AppKit.framework */,
 				8497822E15A40669002B7B94 /* Foundation.framework */,
-				8497822C15A4065C002B7B94 /* Cocoa.framework */,
-				8497822A15A4018C002B7B94 /* Icons.icns */,
 				8497822615A3EFEE002B7B94 /* QuartzCore.framework */,
 				849781E515A38532002B7B94 /* CoreFoundation.framework */,
 				849781AE15A367F8002B7B94 /* ApplicationServices.framework */,
@@ -114,6 +111,7 @@
 		8497819315A361E4002B7B94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8497822A15A4018C002B7B94 /* Icons.icns */,
 				8497819415A361E4002B7B94 /* CBasedMacApp-Info.plist */,
 				8497819515A361E4002B7B94 /* InfoPlist.strings */,
 				8497819815A361E4002B7B94 /* main.m */,
@@ -268,11 +266,16 @@
 		849781A715A361E4002B7B94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CFLAGS = "-arch ppc64";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBasedMacApp/CBasedMacApp-Prefix.pch";
 				INFOPLIST_FILE = "CBasedMacApp/CBasedMacApp-Info.plist";
+				LDFLAGS = "-arch x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
@@ -282,11 +285,16 @@
 		849781A815A361E4002B7B94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CFLAGS = "-arch ppc64";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CBasedMacApp/CBasedMacApp-Prefix.pch";
 				INFOPLIST_FILE = "CBasedMacApp/CBasedMacApp-Info.plist";
+				LDFLAGS = "-arch x86_64";
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
 				WRAPPER_EXTENSION = app;

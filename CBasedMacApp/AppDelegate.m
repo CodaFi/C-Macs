@@ -2,6 +2,8 @@
 #include <objc/runtime.h>
 #include <objc/message.h>
 
+
+//A reference to NSApp.  Always a good idea, seeing has he's probably the most helpful thing in CocoaLand
 extern id NSApp;
 
 struct AppDel
