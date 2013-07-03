@@ -17,6 +17,5 @@ C-Macs is a successful attempt to port the ability to [dig a foundation with a s
 * The app does not release allocated memory;
 * There is an implied autoreleasepool, but one is not explicitly created.
 * A small reliance on `__attribute__((constructor))`, which is not the best way to do things…
-* WAY too many framework includes and links to dylibs we don't need.
-* Built and tested on OS X Lion.  Theoretically, it's possible this works on all machines that support the modern ObjC runtime, however, use on older OSes below 10.6 is highly discouraged.
-* All calls to framework objects are compliant with OS X 10.0+, however the code will only run on intel architectures.  This will be remedied first.
+* Built and tested on OS X Lion.  Theoretically, it's possible this works on all machines that support anything but the ancient GNU runtime, however, use on older OSes below 10.6 is highly discouraged.
+* PRs that add Project Builder functionality are welcomed!
