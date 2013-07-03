@@ -11,12 +11,9 @@
 		8497819915A361E4002B7B94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497819815A361E4002B7B94 /* main.m */; };
 		8497819D15A361E4002B7B94 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8497819B15A361E4002B7B94 /* Credits.rtf */; };
 		849781AF15A367F8002B7B94 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849781AE15A367F8002B7B94 /* ApplicationServices.framework */; };
-		849781E615A38532002B7B94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849781E515A38532002B7B94 /* CoreFoundation.framework */; };
 		8497821F15A3EEF0002B7B94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497821E15A3EEF0002B7B94 /* AppDelegate.m */; };
 		8497822115A3EF23002B7B94 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497822015A3EF23002B7B94 /* View.m */; };
-		8497822715A3EFEE002B7B94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497822615A3EFEE002B7B94 /* QuartzCore.framework */; };
 		8497822B15A4018C002B7B94 /* Icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8497822A15A4018C002B7B94 /* Icons.icns */; };
-		8497822F15A40669002B7B94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497822E15A40669002B7B94 /* Foundation.framework */; };
 		8497823115A40676002B7B94 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497823015A40676002B7B94 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,15 +28,11 @@
 		8497819815A361E4002B7B94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8497819A15A361E4002B7B94 /* CBasedMacApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBasedMacApp-Prefix.pch"; sourceTree = "<group>"; };
 		8497819C15A361E4002B7B94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		849781AE15A367F8002B7B94 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = ../../../../../../System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<group>"; };
-		849781E515A38532002B7B94 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
+		849781AE15A367F8002B7B94 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		8497821E15A3EEF0002B7B94 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8497822015A3EF23002B7B94 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
-		8497822615A3EFEE002B7B94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
-		8497822A15A4018C002B7B94 /* Icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icons.icns; sourceTree = "<group>"; };
-		8497822C15A4065C002B7B94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
-		8497822E15A40669002B7B94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../System/Library/Frameworks/Foundation.framework; sourceTree = "<group>"; };
-		8497823015A40676002B7B94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
+		8497822A15A4018C002B7B94 /* Icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Icons.icns; path = ../Icons.icns; sourceTree = "<group>"; };
+		8497823015A40676002B7B94 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +41,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8497823115A40676002B7B94 /* AppKit.framework in Frameworks */,
-				8497822F15A40669002B7B94 /* Foundation.framework in Frameworks */,
-				8497822715A3EFEE002B7B94 /* QuartzCore.framework in Frameworks */,
-				849781E615A38532002B7B94 /* CoreFoundation.framework in Frameworks */,
 				849781AF15A367F8002B7B94 /* ApplicationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,13 +51,6 @@
 		8497817D15A361E3002B7B94 = {
 			isa = PBXGroup;
 			children = (
-				8497823015A40676002B7B94 /* AppKit.framework */,
-				8497822E15A40669002B7B94 /* Foundation.framework */,
-				8497822C15A4065C002B7B94 /* Cocoa.framework */,
-				8497822A15A4018C002B7B94 /* Icons.icns */,
-				8497822615A3EFEE002B7B94 /* QuartzCore.framework */,
-				849781E515A38532002B7B94 /* CoreFoundation.framework */,
-				849781AE15A367F8002B7B94 /* ApplicationServices.framework */,
 				8497819215A361E4002B7B94 /* CBasedMacApp */,
 				8497818B15A361E4002B7B94 /* Frameworks */,
 				8497818915A361E4002B7B94 /* Products */,
@@ -85,6 +68,8 @@
 		8497818B15A361E4002B7B94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8497823015A40676002B7B94 /* AppKit.framework */,
+				849781AE15A367F8002B7B94 /* ApplicationServices.framework */,
 				8497818C15A361E4002B7B94 /* Cocoa.framework */,
 				8497818E15A361E4002B7B94 /* Other Frameworks */,
 			);
@@ -114,6 +99,7 @@
 		8497819315A361E4002B7B94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C91C90EB1783E94500B32967 /* Artwork */,
 				8497819415A361E4002B7B94 /* CBasedMacApp-Info.plist */,
 				8497819515A361E4002B7B94 /* InfoPlist.strings */,
 				8497819815A361E4002B7B94 /* main.m */,
@@ -121,6 +107,14 @@
 				8497819B15A361E4002B7B94 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C91C90EB1783E94500B32967 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				8497822A15A4018C002B7B94 /* Icons.icns */,
+			);
+			name = Artwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

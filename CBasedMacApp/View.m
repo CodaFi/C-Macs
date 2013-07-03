@@ -35,7 +35,7 @@ void View_drawRect(id self, SEL _cmd, CGRect rect)
 __attribute__((constructor))
 static void initView()
 {
-    
+#ifdef TARGET_RT_MAC_MACHO
     // Once again, just like the app delegate, we tell the runtime to
     // create a new class, this time a subclass of 'UIView' and named 'View'.
     ViewClass = objc_allocateClassPair((Class) objc_getClass("NSView"), "View", 0);
@@ -50,4 +50,17 @@ static void initView()
     // And again, we tell the runtime that this class is now valid to be used.
     // At this point, the application should run and display the screenshot shown below.
     objc_registerClassPair(ViewClass);
+#else
+    ViewClass = class_createInstance(objc_getClass("View"), 0);
+
+    struct objc_method drawRectMethod;
+    drawRectMethod.method_name = sel_registerName("drawRect:");
+    drawRectMethod.method_imp  = (IMP)AppDel_didFinishLaunching;
+    
+    struct objc_method_list *drawRectMessageList;
+    drawRectMessageList = malloc (sizeof(struct objc_method_list));
+    drawRectMessageList->method_count = 1;
+    drawRectMessageList->method_list[0] = drawRectMethod;
+    class_addMethods(ViewClass, drawRectMessageList);
+#endif
 }

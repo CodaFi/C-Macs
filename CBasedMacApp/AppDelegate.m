@@ -19,8 +19,7 @@ Class AppDelClass;
 
 BOOL AppDel_didFinishLaunching(struct AppDel *self, SEL _cmd, id notification) {
     //alloc NSWindow
-    self->window = objc_msgSend(objc_getClass("NSWindow"),
-                                sel_getUid("alloc"));
+    self->window = objc_msgSend(objc_getClass("NSWindow"), sel_getUid("alloc"));
     //init NSWindow
     //Adjust frame.  Window would be about 50*50 px without this
     //specify window type.  We want a resizeable window that we can close.
@@ -45,6 +44,7 @@ BOOL AppDel_didFinishLaunching(struct AppDel *self, SEL _cmd, id notification) {
 
 static void initAppDel()
 {
+#ifdef TARGET_RT_MAC_MACHO
     //Our appDelegate should be NSObject, but if you want to go the hard route, make this a class pair of NSApplication and try initing those awful delegate methods!
     AppDelClass = objc_allocateClassPair((Class)
                                          objc_getClass("NSObject"), "AppDelegate", 0);
@@ -54,9 +54,22 @@ static void initAppDel()
                     (IMP) AppDel_didFinishLaunching, "i@:@");
     
     objc_registerClassPair(AppDelClass);
+#else
+    AppDelClass = class_createInstance(objc_getClass("AppDelegate"), 0);
+    
+    struct objc_method didFinishLaunchingMethod;
+    didFinishLaunchingMethod.method_name = sel_registerName("applicationDidFinishLaunching:");
+    didFinishLaunchingMethod.method_imp  = (IMP)AppDel_didFinishLaunching;
+    
+    struct objc_method_list *appDelMessageList;
+    appDelMessageList = malloc (sizeof(struct objc_method_list));
+    appDelMessageList->method_count = 1;
+    appDelMessageList->method_list[0] = didFinishLaunchingMethod;
+    class_addMethods(AppDelClass, appDelMessageList);
+#endif
 }
 
-void init_app(void)
+static void init_app(void)
 {
     objc_msgSend(
                  objc_getClass("NSApplication"),
